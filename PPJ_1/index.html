@@ -7,14 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<style>
-    header{
-        text-align: center;
-    }
 
+<!-- css 영역 시작 -->
+
+<style>
     #tmenu {
         list-style: none;
-        height: 40px;
+        height: 65px;
         padding: 5px 1px;
         margin: 0px;
         background-color: green;
@@ -27,14 +26,42 @@
         padding: 0;
     }
 
-    a {
+    body {
+        text-align: center;
+    }
+
+    header #tmenu a {
         text-decoration: none;
         color: white;
+        font-size: 45px;
+    }
+
+    #main ul {
+        list-style: none;
+    }
+
+    .logo {
+        width: 30px;
+    }
+
+    .news {
+        width: 380px;
+        height: 200px;
+    }
+
+    .bt1>img {
+        width: 30px;
+    }
+
+    #info a:nth-child(2) img {
+        width: 55px;
     }
 </style>
 
-<body id="main">
+<!-- css영역 끝 -->
 
+<body id="news">
+    <!-- 상단 메뉴바 -->
     <header id="top">
 
         <ul id="tmenu">
@@ -59,14 +86,100 @@
             <li>
                 <a href="#">쇼핑</a>
             </li>
+            <li>
+                <a href="#">＋</a>
+            </li>
         </ul>
-
     </header>
 
+    <!-- 중앙 메인페이지 -->
+    <div id="main">
+        <ul>
+            <li>
+                <a href="#">
+                    <img class="logo" src="./imeges/s1_1.jpg" alt="속보로고">
+
+
+                    군 "북 동해상으로 탄도 미사일 2발 발사"
+
+                    채널A 내용작성전
+
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="logo" src="./imeges/a1_1.png" alt="파이낸셜로고">
+                    파이낸셜 뉴스
+                    <span class="date">
+                        09월 15일 13:39
+                    </span>
+                    <button>
+                        ＋구독
+                    </button>
+                </a>
+            </li>
+            <li>
+                <img class="news" src="./imeges/a1_2.jpg" alt="파이넨셜메인">
+                
+            </li>
+            <li>
+                <a href="#">
+                    <img class="logo" src="./imeges/b1_1.png" alt="이데일리로고">
+                    이데일리
+                    <span class="date">
+                        09월 15일 13:38
+                    </span>
+                    <button>
+                        ＋구독
+                    </button>
+                </a>
+            </li>
+            <li>
+                <img class="news" src="./imeges/b1_2.jpg" alt="이데일리메인">
+            </li>
+            <li>
+                <a href="#">
+                    <img class="logo" src="./imeges/c1_1.png" alt="매일경제로고">
+                    매일경제
+                    <span class="date">
+                        09월 15일 13:37
+                    </span>
+                    <button>
+                        ＋구독
+                    </button>
+                </a>
+            </li>
+            <li>
+                <img class="news" src="./imeges/c1_2.jpg" alt="매일경제메인">
+            </li>
+        </ul>
+    </div>
+    <!-- 메인 하단 버튼 -->
+    <div>
+        <span class="bt1">
+            <img src="./imeges/re1_1.png" alt="새로보기">
+            새로보기
+        </span>
+        <a href="#" title="맨위로"><img src="./imeges/top1_1.png">
+        </a>
+    </div>
+
+    <!-- 하단메뉴 -->
+    <footer id="info">
+        <a href="#">
+            <img src="./imeges/shop1_1.png" alt="쇼핑">
+            쇼핑 라이프
+        </a>
+        <a href="#">
+            <img src="./imeges/nlogo1_1.png" alt="홈으로">
+            홈으로
+        </a>
+        <a href="#">
+            <img src="./imeges/nc1_1.png" alt="뉴스 컨텐츠">
+            뉴스 컨텐츠
+        </a>
+    </footer>
 </body>
 
-<footer id="info">
-
-</footer>
 
 </html>
