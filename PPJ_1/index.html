@@ -36,25 +36,80 @@
         font-size: 45px;
     }
 
+    .hl{
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .sl{
+        font-size: 30px;
+        color:gray;
+    }
+
     #main ul {
         list-style: none;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    #main ul li {
+        position: relative;
+        text-align: center;
+    }
+
+    #main ul li a {
+        text-decoration: none;
+        font-size: 40px;
+    }
+
+    #main ul li p{
+        display: inline;
+
+    }
+
+    #main ul li:first-child {
+        border: rgb(193, 189, 189) solid 20px;
     }
 
     .logo {
-        width: 30px;
+        width: 45px;
     }
 
     .news {
         width: 380px;
         height: 200px;
+        aling:left;
     }
 
     .bt1>img {
-        width: 30px;
+        width: 120px;
+    }
+
+    .bt1{
+        font-size: 70px;
+    }
+
+    .bt2>img{
+        width: 70px;
     }
 
     #info a:nth-child(2) img {
         width: 55px;
+    }
+
+    #info a {
+        text-decoration: none;
+    }
+
+    p {
+        /* ??? 텍스트가 그림 오른쪽에 깔끔하게 붙도록 어떻게 하지? */
+        line-height: 20px;
+    }
+
+    button{
+        width: 100px;
+        height: 50px;
+        font-size: 20px;
     }
 </style>
 
@@ -100,9 +155,10 @@
                     <img class="logo" src="./imeges/s1_1.jpg" alt="속보로고">
 
 
-                    군 "북 동해상으로 탄도 미사일 2발 발사"
-
-                    채널A 내용작성전
+                    <p class="hl">
+                        군 "북 동해상으로 탄도 미사일 2발 발사"
+                        채널A 내용작성전
+                    </p>
 
                 </a>
             </li>
@@ -120,7 +176,13 @@
             </li>
             <li>
                 <img class="news" src="./imeges/a1_2.jpg" alt="파이넨셜메인">
-                
+                <p class="hl">
+                    "홍준표 윤석열에 한번만 더 내 캠프 음해하면 각오하라"
+                </p> <br>
+                <p class="sl">
+                    [파이낸셜뉴스] 국민의힘 대선주자인 홍준표 의원이 15일...
+                </p>
+
             </li>
             <li>
                 <a href="#">
@@ -136,6 +198,13 @@
             </li>
             <li>
                 <img class="news" src="./imeges/b1_2.jpg" alt="이데일리메인">
+                <p class="hl">
+                    문대통령 "한반도 비핵화 중 지지 기대"... 왕이"상호존중 이어가야
+                </p>
+                <br>
+                <p class="sl">
+                    [이데일리 이정현기자] 문재인 대통령이 15일 한국을 방문한 왕이 중국...
+                </p>
             </li>
             <li>
                 <a href="#">
@@ -151,6 +220,13 @@
             </li>
             <li>
                 <img class="news" src="./imeges/c1_2.jpg" alt="매일경제메인">
+                <p class="hl">
+                    "6만원 밥값 먹지도 않는데 수백명분 내라고..." 예비부부 웨딩카 끌고
+                </p>
+                <br>
+                <p class="sl">
+                    전국신혼부부 웨딩카 시위 4단계 최대 99명으로 늘었지만 예식장...
+                </p>
             </li>
         </ul>
     </div>
@@ -160,7 +236,7 @@
             <img src="./imeges/re1_1.png" alt="새로보기">
             새로보기
         </span>
-        <a href="#" title="맨위로"><img src="./imeges/top1_1.png">
+        <a class="bt2" href="#" title="맨위로"><img src="./imeges/top1_1.png">
         </a>
     </div>
 
