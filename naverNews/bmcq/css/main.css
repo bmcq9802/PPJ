@@ -19,6 +19,7 @@
     position: relative;
 }
 
+
 .main_wrap .gnb .list_menu{
     display: flex;
     list-style: none;
@@ -122,11 +123,28 @@ align-items: center;
     border-left: 2px solid rgb(234, 237, 242);
 }
 
+/* 메인뉴스 영역 */
 
+/* 메인뉴스 1 */
 .main_wrap .mainNews01{
     height: 275px;
     border: 1px dotted green;
 }
+
+/* 메인뉴스 1 상단 */
+.main_wrap .mainNews01 .mNewsHead{
+    height: 85px;
+    border: 1px dotted blue;
+}
+
+/* 메인뉴스 1 본문 */
+.main_wrap .mainNews01 .mNewsBody{
+    height: 190px;
+    border: 1px dotted blue;
+}
+
+
+
 .main_wrap .mainNews02{
     height: 275px;
     border: 1px dotted green;
