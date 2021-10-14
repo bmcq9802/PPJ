@@ -47,8 +47,51 @@ align-items: center;
 
 }
 
+
+
+/* 버튼 */
+.main_wrap .gnb .btn_more{
+    display: block;
+    line-height: 86px;
+    height: 86px;
+    background: linear-gradient(to left, #119eb1 0, #0fa3a6 34px, rgba(15, 163, 166, 0) 100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    width: 45px;
+    
+    color:#fff;
+    font-size: 18px;
+    
+    
+    border: 0;
+    outline: 0;
+}
+
+
 /* 여백 */
 .blank{
     height: 25px;
     border: 1px dotted yellow;
+}
+
+/* 속보영역 */
+.brNews{
+    position: relative;
+    background-color: rgb(234, 237, 242);
+    height: 115px;
+    border: 1px dotted blue;
+}
+
+/* 속보영역 안쪽 흰영역 */
+.sNews{
+    position: absolute;
+    top: 11%;
+    left: 2%;
+    height: 89px;
+    width: 640px;
+    background-color: #fff;
+    margin: 0;
+    border-radius: 15px;
 }
