@@ -24,7 +24,7 @@
     display: flex;
     list-style: none;
     text-align: center;
-    font-size: 18px;
+    font-size: 27px;
     overflow-y: hidden;
     overflow-x: auto;
     font-weight: 600;
@@ -100,10 +100,27 @@ align-items: center;
     height: 100%;
 
     flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-around;
+    align-content: flex-end;
+    justify-content: flex-start;
+    font-size: 20px;
 
     position: absolute;
+}
+
+/* ??? 내부요소 가운데 정렬 이쁘게 하는 방법 ㅠ??? */
+
+.main_wrap .brNews .sNews .br_list img{
+    margin-top: -12px;
+}
+
+.main_wrap .brNews .sNews .br_list:nth-child(2){
+    margin-top: -7px;
+    margin-left: 12px;
+}
+
+.main_wrap .brNews .sNews .br_list:nth-child(3){
+    margin-top: -42px;
+    margin-left: 93px;
 }
 
 /* 속보 버튼 */
@@ -135,13 +152,57 @@ align-items: center;
 .main_wrap .mainNews01 .mNewsHead{
     height: 85px;
     border: 1px dotted blue;
+    position: relative;
 }
+
+.main_wrap .mainNews01 .mNewsHead .h_list{
+    display: flex;
+    list-style: none;
+}
+
+.main_wrap .mainNews01 .mNewsHead .btn_sub{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
 
 /* 메인뉴스 1 본문 */
 .main_wrap .mainNews01 .mNewsBody{
     height: 190px;
     border: 1px dotted blue;
+    position: relative;
 }
+
+.main_wrap .mainNews01 .mNewsBody .pic{
+    position: absolute;
+    left: 0;
+    width: 270px;
+    height: 190px;
+    border: 1px dotted red;
+}
+
+.main_wrap .mainNews01 .mNewsBody .pic img{
+    width: 238px;
+    height: 161px;
+    margin-left: 16px;
+    margin-top: 12px;
+
+}
+
+.main_wrap .mainNews01 .mNewsBody .bold{
+    margin-left: 270px;
+    height: 95px;
+    border: 1px dotted red;
+}
+
+.main_wrap .mainNews01 .mNewsBody .normal{
+    margin-left: 270px;
+    height: 95px;
+    border: 1px dotted red;
+}
+
 
 
 
@@ -152,4 +213,10 @@ align-items: center;
 .main_wrap .mainNews03{
     height: 275px;
     border: 1px dotted green;
+}
+
+.logo{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
 }
