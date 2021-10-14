@@ -3,7 +3,7 @@
 /* 전체영역 */
 .main_wrap{
     max-width: 670px;
-    height: 1050px;
+    height: 1065px;
     border: 1px dotted red;
     margin: 0 auto;
 }
@@ -43,12 +43,6 @@
 align-items: center;
 }
 
-.main_wrap .gnb .list_menu li .menu{
-
-}
-
-
-
 /* 버튼 */
 .main_wrap .gnb .btn_more{
     display: block;
@@ -71,13 +65,13 @@ align-items: center;
 
 
 /* 여백 */
-.blank{
+.main_wrap .blank{
     height: 25px;
     border: 1px dotted yellow;
 }
 
 /* 속보영역 */
-.brNews{
+.main_wrap .brNews{
     position: relative;
     background-color: rgb(234, 237, 242);
     height: 115px;
@@ -85,7 +79,7 @@ align-items: center;
 }
 
 /* 속보영역 안쪽 흰영역 */
-.sNews{
+.main_wrap .brNews .sNews{
     position: absolute;
     top: 11%;
     left: 2%;
@@ -94,4 +88,50 @@ align-items: center;
     background-color: #fff;
     margin: 0;
     border-radius: 15px;
+}
+/* 속보 내용 */
+.main_wrap .brNews .sNews .br_list{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    left: -40px;
+    width: calc(100% - 34px);
+    height: 100%;
+
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+
+    position: absolute;
+}
+
+/* 속보 버튼 */
+.main_wrap .brNews .sNews .btn_br{
+    border: 0;
+    outline: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    height: 89px;
+    width: 30px;
+
+    border-radius: 0 15px 15px 0;
+
+    background-color: #fff;
+    border-left: 2px solid rgb(234, 237, 242);
+}
+
+
+.main_wrap .mainNews01{
+    height: 275px;
+    border: 1px dotted green;
+}
+.main_wrap .mainNews02{
+    height: 275px;
+    border: 1px dotted green;
+}
+.main_wrap .mainNews03{
+    height: 275px;
+    border: 1px dotted green;
 }
