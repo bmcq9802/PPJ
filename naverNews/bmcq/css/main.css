@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/* 전체영역 */
 .main_wrap{
     max-width: 670px;
     height: 1050px;
@@ -7,6 +8,7 @@
     margin: 0 auto;
 }
 
+/* GNB */
 .main_wrap .gnb{
     height: 86px;
     background: linear-gradient(to right, #09c665 0, #07bb7b 52%, #0fa3a6 100%);
@@ -19,7 +21,6 @@
 
 .main_wrap .gnb .list_menu{
     display: flex;
-    width: calc(100% - 34px);
     list-style: none;
     text-align: center;
     font-size: 18px;
@@ -27,7 +28,15 @@
     overflow-x: auto;
     font-weight: 600;
 
+    margin: 0 auto;
+    width: calc(100% - 34px);
+    height: 100%;
+
+    left: -40px;
     position: absolute;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
 }
 
 .main_wrap .gnb .list_menu li{
@@ -36,4 +45,10 @@ align-items: center;
 
 .main_wrap .gnb .list_menu li .menu{
 
+}
+
+/* 여백 */
+.blank{
+    height: 25px;
+    border: 1px dotted yellow;
 }
