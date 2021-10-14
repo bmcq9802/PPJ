@@ -13,34 +13,27 @@
     background-size: 100%;
     color: #fff;
     border: 1px dotted blue;
+
+    position: relative;
 }
 
 .main_wrap .gnb .list_menu{
     display: flex;
+    width: calc(100% - 34px);
     list-style: none;
     text-align: center;
     font-size: 18px;
-    font-weight: 500;
     overflow-y: hidden;
     overflow-x: auto;
-    box-sizing: border-box;
-    padding: 0px 20px 0 20px;
-    justify-content: flex-start;
-    align-items: center;
-    height: 52px;
+    font-weight: 600;
+
+    position: absolute;
 }
 
 .main_wrap .gnb .list_menu li{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    text-align: center;
+align-items: center;
 }
 
 .main_wrap .gnb .list_menu li .menu{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-right: 6px;
+
 }

@@ -72,7 +72,7 @@
 }
 .gnb.type_02 .nav .list_menu {
     display: flex;
-    width: calc(100% - 34px);
+    width: calc(100% - 34px); /* ??? 여기가 하는일? 이 뭘까요? ???*/
     text-align: center;
     font-size: 18px;
     font-weight: 500;
