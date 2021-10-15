@@ -100,27 +100,28 @@ align-items: center;
     height: 100%;
 
     flex-wrap: wrap;
-    align-content: flex-end;
+    align-content: center;
     justify-content: flex-start;
     font-size: 20px;
 
     position: absolute;
 }
 
-/* ??? 내부요소 가운데 정렬 이쁘게 하는 방법 ㅠ??? */
-
-.main_wrap .brNews .sNews .br_list img{
-    margin-top: -12px;
+.main_wrap .brNews .sNews .br_list .br_logo{
+    margin-left: 10px;
 }
 
-.main_wrap .brNews .sNews .br_list:nth-child(2){
-    margin-top: -7px;
-    margin-left: 12px;
+
+.main_wrap .brNews .sNews .br_list .br_Nk{
+    margin-left: 10px;
+    margin-top: 5px;
 }
 
-.main_wrap .brNews .sNews .br_list:nth-child(3){
-    margin-top: -42px;
-    margin-left: 93px;
+.main_wrap .brNews .sNews .chA{
+    position: absolute;
+    top: 19px;
+    right: 44px;
+    text-align: center;
 }
 
 /* 속보 버튼 */
@@ -130,6 +131,8 @@ align-items: center;
     position: absolute;
     top: 0;
     right: 0;
+    font-size: 22px;
+    color: gray;
 
     height: 89px;
     width: 30px;
@@ -160,10 +163,41 @@ align-items: center;
     list-style: none;
 }
 
+/* 메인뉴스 언론사 로고 */
+.main_wrap .mainNews01 .mNewsHead .h_list .m_logo img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* 메인뉴스 언론사 이름 */
+.main_wrap .mainNews01 .mNewsHead .h_list .com{
+    font-size: 28px;
+    margin-left: 14px;
+}
+/* 뉴스 작성 일시 */
+.main_wrap .mainNews01 .mNewsHead .h_list .date{
+    color: gray;
+    font-size: 20px;
+    margin-left: 14px;
+    margin-top: 6px;
+}
+
+/* 구독버튼 */
 .main_wrap .mainNews01 .mNewsHead .btn_sub{
     position: absolute;
-    top: 0;
-    right: 0;
+    font-size: 18px;
+
+    width: 80px;
+    height: 35px;
+
+    top: 15px;
+    right: 15px;
+    color: #09c665;
+
+    border: #09c665 solid 2px;
+    border-radius: 5px;
+    background: none;
 }
 
 
@@ -175,6 +209,7 @@ align-items: center;
     position: relative;
 }
 
+/* 메인뉴스 1 사진영역 */
 .main_wrap .mainNews01 .mNewsBody .pic{
     position: absolute;
     left: 0;
@@ -183,24 +218,36 @@ align-items: center;
     border: 1px dotted red;
 }
 
+/* 메인뉴스 1 사진 img */
 .main_wrap .mainNews01 .mNewsBody .pic img{
     width: 238px;
     height: 161px;
     margin-left: 16px;
     margin-top: 12px;
 
+    border-radius: 5px;
+
 }
 
+/* 메인뉴스 1 머리말 */
 .main_wrap .mainNews01 .mNewsBody .bold{
+    font-weight: bold;
     margin-left: 270px;
     height: 95px;
+    font-size: 21px;
+
     border: 1px dotted red;
 }
 
+/* 메인뉴스 1 내용 미리보기 */
 .main_wrap .mainNews01 .mNewsBody .normal{
+    color: gray;
     margin-left: 270px;
     height: 95px;
+    font-size: 21px;
+
     border: 1px dotted red;
+
 }
 
 
@@ -214,6 +261,8 @@ align-items: center;
     height: 275px;
     border: 1px dotted green;
 }
+
+/* 채널A 로고 사이즈 */
 
 .logo{
     width: 18px;
