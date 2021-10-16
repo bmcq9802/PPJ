@@ -72,7 +72,7 @@
 }
 .gnb.type_02 .nav .list_menu {
     display: flex;
-    width: calc(100% - 34px); /* ??? 여기가 하는일? 이 뭘까요? ???*/
+    width: calc(100% - 34px);
     text-align: center;
     font-size: 18px;
     font-weight: 500;
@@ -95,7 +95,7 @@ ul.list_menu {}
 
 .gnb.type_02 .nav .list_menu li .menu {
     height: 100%;
-    display: flex;
+    display: flex; /* 하위요소에 플렉스를 계속 주는 이유? */
     align-items: center;
     justify-content: center;
     padding-right: 6px;
