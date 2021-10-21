@@ -1,110 +1,133 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
 
     <!-- 파비콘 추가 -->
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico" />
 
     <!--  og:이미지 추가 주로 카카오톡에서 뜨는 이미지 -->
-    <meta property="og:image" content="og_img.png">
+    <meta property="og:image" content="og_img.png" />
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 아이오닉 아이콘폰트 추가 2.0버전 스크립트 없는 버전 -->
+    <link href="./css/ionicons.css" rel="stylesheet" type="text/css" />
+    <!-- 리셋 추가 -->
+    <link href="./css/reset.css" rel="stylesheet" type="text/css" />
+    <!-- 아이오닉 아이콘폰트 추가 2.0버전 스크립트 없는 버전 -->
+    <link href="./css/ionicons.css" rel="stylesheet" type="text/css" />
+    <!-- 리셋 추가 -->
+    <link href="./css/reset.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="./css/main.css" />
     <title>Naver News</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- 1. 전체 영역 -->
     <div class="main_wrap">
+      <!-- 2. 상단 메뉴바 -->
+      <div class="gnb">
+        <!-- 2-1 상단 메뉴 리스트 -->
+        <ul class="list_menu">
+          <!-- ??? flex 앞에 여기 아무것도 없는데 왜 한칸 밀려있는지 ㅠ ???  -->
+          <li><a class="menu" href="#"></a>뉴스</li>
+          <li><a class="menu" href="#"></a>테크</li>
+          <li><a class="menu" href="#"></a>연예</li>
+          <li><a class="menu" href="#"></a>뿜</li>
+          <li><a class="menu" href="#"></a>디자인</li>
+          <li><a class="menu" href="#"></a>영화</li>
+          <li><a class="menu" href="#"></a>쇼핑</li>
+        </ul>
 
-        <!-- 2. 상단 메뉴바 -->
-        <div class="gnb">
+        <!--2-2 "+" 버튼 넣기 -->
+        <button class="btn_more">+</button>
+      </div>
 
-            <!-- 2-1 상단 메뉴 리스트 -->
-            <ul class="list_menu">
-
-                <!-- ??? flex 앞에 여기 아무것도 없는데 왜 한칸 밀려있는지 ㅠ ???  -->
-                <li><a class="menu" href="#"></a>뉴스</li>
-                <li><a class="menu" href="#"></a>테크</li>
-                <li><a class="menu" href="#"></a>연예</li>
-                <li><a class="menu" href="#"></a>뿜</li>
-                <li><a class="menu" href="#"></a>디자인</li>
-                <li><a class="menu" href="#"></a>영화</li>
-                <li><a class="menu" href="#"></a>쇼핑</li>
-            </ul>
-
-            <!--2-2 "+" 버튼 넣기 -->
-            <button class="btn_more">
-                +
-            </button>
+      <div class="blank"></div>
+      <div class="brNews">
+        <div class="sNews">
+          <ul class="br_list">
+            <li>
+              <a href="#"></a>
+              <img class="br_logo" src="./images/s1_1.jpg" alt="속보로고" />
+            </li>
+            <li class="br_Nk">
+              <a href="#"></a> 군 "北" 동해상으로 탄도 미사일 2발 발사
+            </li>
+          </ul>
+          <div class="chA">
+            <a href="#"></a> 채널A
+            <img class="logo" src="./images/cha1_1.jpg" alt="채널a로고" />
+            <br />
+            내용작성전
+          </div>
+          <button class="btn_br">∨</button>
         </div>
-
-        <div class="blank"></div>
-        <div class="brNews">
-            <div class="sNews">
-                <ul class="br_list">
-                    <li> <a href="#"></a> <img class="br_logo" src="./images/s1_1.jpg" alt="속보로고"></li>
-                    <li class="br_Nk"> <a href="#"></a> 군 "北" 동해상으로 탄도 미사일 2발 발사</li>
-                </ul>
-                <div class="chA"><a href="#"></a> 채널A <img class ="logo" src="./images/cha1_1.jpg" alt="채널a로고"> <br> 내용작성전</div>
-                <button class="btn_br">
-                    ∨
-                </button>
-            </div>
+      </div>
+      <div class="mainNews01">
+        <div class="mNewsHead">
+          <ul class="h_list">
+            <li class="m_logo">
+              <!-- 로고 -->
+              <a href="#">
+                <img src="./images/a1_1.png" alt="파이낸셜" />
+              </a>
+            </li>
+            <li class="com">
+              <!-- 신문사 -->
+              파이낸셜뉴스
+            </li>
+            <li class="date">
+              <!-- 날짜 -->
+              09월 15일 13:39
+            </li>
+          </ul>
+          <button class="btn_sub">+구독</button>
         </div>
-        <div class="mainNews01">
-
-            <div class="mNewsHead">
-                <ul class="h_list">
-                    <li class="m_logo">
-                        <!-- 로고 -->
-                        <a href="#">
-                            <img src="./images/a1_1.png" alt="파이낸셜">
-                        </a>
-                    </li>
-                    <li class="com">
-                        <!-- 신문사 -->
-                        파이낸셜뉴스
-                    </li>
-                    <li class="date">
-                        <!-- 날짜 -->
-                        09월 15일 13:39
-                    </li>
-                </ul>
-                <button class="btn_sub">
-                    +구독
-                </button>
-            </div>
-            <div class="mNewsBody">
-                <div class="pic">
-                    <!-- 사진 -->
-                    <img src="./images/a1_2.jpg" alt="파이낸셜메인사진">
-                </div>
-                <section class="bold">
-                    <!-- 진한글씨 -->
-                    <br>
-                    홍준표 윤석열에 "한번만 더 내 캠프 음해하면 각오하라"
-                </section>
-                <section class="normal">
-                    <!-- 흐린글씨 -->
-                    [파이낸셜뉴스] 국민의힘 대선주자인 홍준표 의원이 15일 윤석열 전 검찰...
-                </section>
-                
-            </div>
-
+        <ul class="article_1">
+          <li>
+            <a href="">
+              <div class="img_area">
+                <img src="./images/a1_2.jpg" alt="파이낸셜메인사진" />
+              </div>
+              <div class="txt_area">
+                <h3 class="tit_article">
+                  홍준표 윤석열에 "한번만 더 내 캠프 음해하면 각오하라"
+                </h3>
+                <p class="txt">
+                  [파이낸셜뉴스] 국민의힘 대선주자인 홍준표 의원이 15일 윤석열
+                  전 검찰[파이낸셜뉴스] 국민의힘 대선주자인 홍준표 의원이 15일
+                  윤석열 전 검찰[파이낸셜뉴스] 국민의힘 대선주자인 홍준표 의원이
+                  15일 윤석열 전 검찰[파이낸셜뉴스] 국민의힘 대선주자인 홍준표
+                  의원이 15일 윤석열 전 검찰[파이낸셜뉴스] 국민의힘 대선주자인
+                  홍준표 의원이 15일 윤석열 전 검찰[파이낸셜뉴스] 국민의힘
+                  대선주자인 홍준표 의원이 15일 윤석열 전 검찰
+                </p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <div class="mNewsBody">
+          <div class="pic">
+            <!-- 사진 -->
+            <img src="./images/a1_2.jpg" alt="파이낸셜메인사진" />
+          </div>
+          <section class="bold">
+            <!-- 진한글씨 -->
+            <br />
+            홍준표 윤석열에 "한번만 더 내 캠프 음해하면 각오하라"
+          </section>
+          <section class="normal">
+            <!-- 흐린글씨 -->
+            [파이낸셜뉴스] 국민의힘 대선주자인 홍준표 의원이 15일 윤석열 전
+            검찰...
+          </section>
         </div>
-        <div class="mainNews02">
-        
-        </div>
-        <div class="mainNews03">
-        
-        </div>
+      </div>
+      <div class="mainNews02"></div>
+      <div class="mainNews03"></div>
     </div>
-
-
-</body>
-
+  </body>
 </html>

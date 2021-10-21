@@ -1,119 +1,582 @@
 @charset "utf-8";
+html body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+input,
+audio,
+video {
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    word-break: keep-all;
+    outline: none;
+    background: none;
+}
 
-.main_wrap {
+/*reset */
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    font-family: "Spoqa Han Sans Neo", Malgun Gothic, "Droid Sans", arial, sans-serif;
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+body {
+    line-height: 1;
+}
+
+blockquote {
+    quotes: none;
+}
+
+blockquote:before {
+    content: none;
+}
+
+blockquote:after {
+    content: none;
+}
+
+a,
+button {
     display: block;
-    max-width: 720px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    min-width: 45px;
+    min-height: 45px;
+    outline: none;
+    color: inherit;
+}
+
+a:focus {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+}
+
+a:visited,
+a:focus {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: top;
+    width: 100%;
+}
+
+q {
+    quotes: none;
+}
+
+q:before {
+    content: none;
+}
+
+q:after {
+    content: none;
+}
+
+ol {
+    list-style: none;
+}
+
+ul {
+    list-style: none;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+#accessibility {
+    z-index: 9999;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: left;
+}
+
+#accessibility a {
+    display: block;
+    z-index: 500;
+    position: absolute;
+    width: 100%;
+    top: -1000px;
+    left: 0;
+    text-align: center;
+}
+
+#accessibility a:focus,
+#accessibility a:active {
+    z-index: 1000;
+    position: absolute;
+    height: 40px;
+    top: 0;
+    font: bold 12px "Malgun Gothic", Dotum, Gulim, "Apple SD Gothic Neo", sans-serif;
+    line-height: 40px;
+    color: #fff;
+    background: #000;
+}
+
+.a11y {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    top: -900px;
+    margin: -1px;
+}
+
+.ir {
+    display: block;
+    position: absolute;
+    position: relative;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+
+.ir:after,
+.after:after,
+.before:before {
+    display: block;
+    content: "";
+}
+
+.ir:after {
+    position: absolute;
+}
+
+@media screen and (min-width: 1080px) {
+    a:hover,
+    button:hover {
+        text-decoration: none;
+        opacity: 0.7;
+    }
+}
+.mt10{
+    margin-top: 10px!important;
+}
+/* 전체영역 */
+.main_wrap{
+    max-width: 670px;
+    height: 1065px;
+    border: 1px dotted red;
     margin: 0 auto;
 }
 
-.gnb.type_01 {
-    /* css폴백 
-    -하위 호환이 먼저 먹게 하고 그위에 모던브라우저 속성을 
-    넣으면 모던 브라우저에서 로드시 폴백값은 표현되지 않음
-    구형 브라우저에서는 모던브라우저 속성이 무시되므로 먼저 기록한
-    색상값 #07bb7b 가 적용됨 */
-    background: #07bb7b;
+/* GNB */
+.main_wrap .gnb{
+    height: 86px;
     background: linear-gradient(to right, #09c665 0, #07bb7b 52%, #0fa3a6 100%);
     background-size: 100%;
     color: #fff;
-}
-.gnb.type_01 .nav {
-    display: inline-block;
-    width: 100%;
-    height: 54px;
-    white-space: nowrap;
-    vertical-align: top;
+    border: 1px dotted blue;
+
     position: relative;
 }
-.gnb.type_01 .nav .list_menu {
-    display: block;
-    line-height: 54px;
-    width: 100%;
+
+
+.main_wrap .gnb .list_menu{
+    display: flex;
+    list-style: none;
     text-align: center;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 27px;
     overflow-y: hidden;
     overflow-x: auto;
-    padding: 0 60px 0 20px;
-    box-sizing: border-box;
-}
-.gnb.type_01 .nav .list_menu li {
-    display: inline-block;
-}
+    font-weight: 600;
 
-.gnb.type_01 .nav .list_menu li .menu {
-    height: 100%;
-}
-.gnb.type_01 .nav .btn_more {
-    display: inline-block;
-    line-height: 54px;
-    height: 54px;
-    vertical-align: top;
-    background: #119eb1;
-    background: linear-gradient(to left, #119eb1 0, #0fa3a6 34px, rgba(15, 163, 166, 0) 100%);
-    position: absolute;
-    top: 0;
-    right: 0;
-    overflow: hidden;
-}
-
-
-
-
-
-.gnb.type_02 {
-    background: linear-gradient(to right, #09c665 0, #07bb7b 52%, #0fa3a6 100%);
-    background-size: 100%;
-    color: #fff;
-}
-.gnb.type_02 .nav {
-    height: 54px;
-    position: relative;
-}
-.gnb.type_02 .nav .list_menu {
-    display: flex;
+    margin: 0 auto;
     width: calc(100% - 34px);
-    text-align: center;
-    font-size: 18px;
-    font-weight: 500;
-    overflow-y: hidden;
-    overflow-x: auto;
-    box-sizing: border-box;
-    padding: 0px 20px 0 20px;
-    justify-content: flex-start;
-    align-items: center;
-    height: 52px;
-}
-
-ul.list_menu {}
-.gnb.type_02 .nav .list_menu li {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    text-align: center;
-}
-
-.gnb.type_02 .nav .list_menu li .menu {
     height: 100%;
-    display: flex; /* 하위요소에 플렉스를 계속 주는 이유? */
-    align-items: center;
-    justify-content: center;
-    padding-right: 6px;
+
+    /* ??? flex 왼쪽에 왜 마진영역이 생기는지 ??? */
+
+    left: -40px;
+    position: absolute;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
 }
-.gnb.type_02 .nav .btn_more {
+
+.main_wrap .gnb .list_menu li{
+align-items: center;
+}
+
+/* 버튼 */
+.main_wrap .gnb .btn_more{
     display: block;
-    line-height: 54px;
-    height: 54px;
+    line-height: 86px;
+    height: 86px;
     background: linear-gradient(to left, #119eb1 0, #0fa3a6 34px, rgba(15, 163, 166, 0) 100%);
     position: absolute;
     top: 0;
     right: 0;
     overflow: hidden;
     width: 45px;
+    
+    color:#fff;
+    font-size: 18px;
+    
+    
+    border: 0;
+    outline: 0;
 }
 
-@media screen and (min-width: 720px) {
-    .gnb.type_02 .nav .list_menu {
-        justify-content: center;
-    }
+
+/* 여백 */
+.main_wrap .blank{
+    height: 25px;
+    border: 1px dotted yellow;
 }
+
+/* 속보영역 */
+.main_wrap .brNews{
+    position: relative;
+    background-color: rgb(234, 237, 242);
+    height: 115px;
+    border: 1px dotted blue;
+}
+
+/* 속보영역 안쪽 흰영역 */
+.main_wrap .brNews .sNews{
+    position: absolute;
+    top: 11%;
+    left: 2%;
+    height: 89px;
+    width: 640px;
+    background-color: #fff;
+    margin: 0;
+    border-radius: 15px;
+}
+/* 속보 내용 */
+.main_wrap .brNews .sNews .br_list{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    left: -40px;
+    width: calc(100% - 34px);
+    height: 100%;
+
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    font-size: 20px;
+
+    position: absolute;
+}
+
+.main_wrap .brNews .sNews .br_list .br_logo{
+    margin-left: 10px;
+}
+
+
+.main_wrap .brNews .sNews .br_list .br_Nk{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.main_wrap .brNews .sNews .chA{
+    position: absolute;
+    top: 19px;
+    right: 44px;
+    text-align: center;
+}
+
+/* 속보 버튼 */
+.main_wrap .brNews .sNews .btn_br{
+    border: 0;
+    outline: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 22px;
+    color: gray;
+
+    height: 89px;
+    width: 30px;
+
+    border-radius: 0 15px 15px 0;
+
+    background-color: #fff;
+    border-left: 2px solid rgb(234, 237, 242);
+}
+
+/* 메인뉴스 영역 */
+
+/* 메인뉴스 1 */
+.main_wrap .mainNews01{
+    height: 275px;
+    border: 1px dotted green;
+}
+
+/* 메인뉴스 1 상단 */
+.main_wrap .mainNews01 .mNewsHead{
+    height: 85px;
+    border: 1px dotted blue;
+    position: relative;
+}
+
+.main_wrap .mainNews01 .mNewsHead .h_list{
+    display: flex;
+    list-style: none;
+}
+
+/* 메인뉴스 언론사 로고 */
+.main_wrap .mainNews01 .mNewsHead .h_list .m_logo img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* 메인뉴스 언론사 이름 */
+.main_wrap .mainNews01 .mNewsHead .h_list .com{
+    font-size: 28px;
+    margin-left: 14px;
+}
+/* 뉴스 작성 일시 */
+.main_wrap .mainNews01 .mNewsHead .h_list .date{
+    color: gray;
+    font-size: 20px;
+    margin-left: 14px;
+    margin-top: 6px;
+}
+
+/* 구독버튼 */
+.main_wrap .mainNews01 .mNewsHead .btn_sub{
+    position: absolute;
+    font-size: 18px;
+
+    width: 80px;
+    height: 35px;
+
+    top: 15px;
+    right: 15px;
+    color: #09c665;
+
+    border: #09c665 solid 2px;
+    border-radius: 5px;
+    background: none;
+}
+
+
+
+/* 메인뉴스 1 본문 */
+.main_wrap .mainNews01 .mNewsBody{
+    height: 190px;
+    border: 1px dotted blue;
+    position: relative;
+}
+
+/* 메인뉴스 1 사진영역 */
+.main_wrap .mainNews01 .mNewsBody .pic{
+    position: absolute;
+    left: 0;
+    width: 270px;
+    height: 190px;
+    border: 1px dotted red;
+}
+
+/* 메인뉴스 1 사진 img */
+.main_wrap .mainNews01 .mNewsBody .pic img{
+    width: 238px;
+    height: 161px;
+    margin-left: 16px;
+    margin-top: 12px;
+
+    border-radius: 5px;
+
+}
+
+/* 메인뉴스 1 머리말 */
+.main_wrap .mainNews01 .mNewsBody .bold{
+    font-weight: bold;
+    margin-left: 270px;
+    height: 95px;
+    font-size: 21px;
+
+    border: 1px dotted red;
+}
+
+/* 메인뉴스 1 내용 미리보기 */
+.main_wrap .mainNews01 .mNewsBody .normal{
+    color: gray;
+    margin-left: 270px;
+    height: 95px;
+    font-size: 21px;
+
+    border: 1px dotted red;
+
+}
+
+
+
+
+.main_wrap .mainNews02{
+    height: 275px;
+    border: 1px dotted green;
+}
+.main_wrap .mainNews03{
+    height: 275px;
+    border: 1px dotted green;
+}
+
+/* 채널A 로고 사이즈 */
+
+.logo{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+}
+
+
+/* sky */
+/* article_1 */
+.article_1{
+
+    width: 100%;
+}
+.article_1 li{
+    display: block;
+    position: relative;
+    padding: 10px;
+    overflow: hidden;
+}
+.article_1 li > a{display: block;}
+.article_1 li .img_area {
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.article_1 li .img_area img{
+    width: auto;
+    height: 100%;
+}
+
+.article_1 li .txt_area {display: flex;padding: 10px 140px 10px 10px;width: 100%;min-height: 120px;font-size: 16px;box-sizing: border-box;flex-direction: column;justify-content: center;}
+.article_1 li .txt_area .tit_article{
+    font-weight: 700;
+    line-height: 1.5;
+    white-space: nowrap;
+    max-width: 100%;
+    width: 77%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 1em;
+}
+.article_1 li .txt_area .txt{
+    margin-top: 5px;
+    font-size: .9em;
+    height: 2.4em;
+    overflow: hidden;
+    line-height: 1.2em;
+}
+
